@@ -1,0 +1,11 @@
+<br>
+<div class='row'>
+  <div class='col-xs-8 offset-xs-2 col-sm-4 offset-sm-4'>
+    <select #inputBase (change)='selectInputBase(inputBase.value)' class='form-control'>
+      <option *ngFor='let name of baseNames' value='{{ name }}' [selected]="name==initialInputBase">{{ name }}</option>
+    </select><br>
+    <select #outputBase (change)='selectOutputBase(outputBase.value)' class='form-control'>
+      <option *ngFor='let name of baseNames' value='{{ name }}' [selected]="name==initialOutputBase">{{ name }}</option>
+    </select><br>
+  </div>
+</div>
